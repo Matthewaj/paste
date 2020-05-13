@@ -2,12 +2,12 @@
   "name": "paste",
   "version": "0.0.0",
   "scripts": {
-    "ng": "paste/node_modules/.bin/ng",
-    "start": "paste/node_modules/.bin/ng serve",
-    "build": "paste/node_modules/.bin/ng build",
-    "test": "paste/node_modules/.bin/ng test",
-    "lint": "paste/node_modules/.bin/ng lint",
-    "e2e": "paste/node_modules/.bin/ng e2e"
+    "ng": "ng",
+    "start": "ng serve --proxy-config proxy.conf.json",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
