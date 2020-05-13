@@ -1,0 +1,27 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-text {
+  min-width: 50vh;
+  min-height: 50vh;
+  border: 1px solid black;
+}
+
+.form-button {
+  margin-top: 10px;
+}
+
+.view-paste {
+  max-width: 50vw;
+  max-height: 50vh;
+}

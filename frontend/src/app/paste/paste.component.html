@@ -1,1 +1,22 @@
-<p>paste works!</p>
+<div class="content" *ngIf="response === null; else viewPaste">
+  <h1>Add a Paste</h1>
+  <form [formGroup]="createPasteForm" (ngSubmit)="onSubmit(createPasteForm.value)">
+    <div class="form-group">
+      <label for="name" id="name-label" class="control-label">Name</label>
+      <input type="text" id="name" name="name" aria-labelledby="name-label" formControlName="name" required class="form-control">
+    </div>
+      <div class="form-group">
+        <label for="paste">New Paste</label>
+        <textarea class="form-control" formControlName="text" id="paste" name="paste" aria-label="paste" required></textarea>
+      </div>
+    <button class="btn btn-primary" type="submit">Add Paste</button>
+  </form>
+</div>
+
+<ng-template #viewPaste>
+  <div class="content">
+    <h1>{{ response.name }}</h1>
+    <h2>ID: <span class="text-info">{{ response.id }}</span></h2>
+    <textarea readonly class="form-control view-paste">{{ response.text }}</textarea>
+  </div>
+</ng-template>
